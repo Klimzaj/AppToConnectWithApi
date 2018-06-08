@@ -6,9 +6,9 @@ class SwordContent extends Component {
     return (
       <div>
         <li style = {this.props.style} >
-            <p>Name: {this.props.name},    
-                Dmg: {this.props.dmg},   
-                Cost: {this.props.cost}
+            <p>Name: <b>{this.props.name}</b>,    
+                Dmg: <b>{this.props.dmg}</b>,   
+                Cost: <b>{this.props.cost}</b>
             </p>
         </li>
       </div>

@@ -71,8 +71,49 @@ const SampleActionCreators = {
     .catch(function (error) {
       console.log(error);
     })
-  }
+  },
+  action007(arg1) {
+    axios.post('http://localhost:3000/api/shop', {
+      name: arg1.name,
+      d: arg1.d,
+      cost: arg1.cost,
+      it: arg1.it,
+      dval: arg1.dval
 
+    })
+    .then(function (response) {
+      // console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  },
+  action008(arg1) {
+    axios.get('http://localhost:3000/api/playersinfo')
+    .then(function (response) {
+      let result = response.data.data.playersInfo;
+      AppDispatcher.dispatch({
+        type: ActionTypes.TYPE_008,
+        data: {
+          "info": result
+        },
+      })
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+  },
+  action009(arg1) {
+    axios.post('http://localhost:3000/api/play', {
+      id: arg1.id,
+      win: arg1.win
+    })
+    .then(function (response) {
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
 };
 
 export default SampleActionCreators;

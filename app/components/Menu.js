@@ -9,8 +9,10 @@ class Menu extends Component {
     return (
       <List style={{width: '15%'}}>
         <ListSubheader>Menu</ListSubheader>
-        <ListItem component={Link} to="/players">PlayerList</ListItem>
+        {/* <ListItem component={Link} to="/players">PlayerList</ListItem> */}
         <ListItem component={Link} to="/addplayer">AddPlayer</ListItem>
+        <ListItem component={Link} to="/playerlist">PlayerList</ListItem>
+        <ListItem component={Link} to="/addshop">AddShopItem</ListItem>
         <ListItem component={Link} to="/swords">WeaponList</ListItem>
         <ListItem component={Link} to="/shields">ShieldList</ListItem>
       </List>

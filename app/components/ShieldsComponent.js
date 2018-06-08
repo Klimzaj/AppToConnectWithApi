@@ -29,6 +29,7 @@ class _ShieldsContainer extends Component {
     allShields = (shields) => shields.map(this.createShield);
     
     componentDidMount() {
+        
     }
   render() {
     return (

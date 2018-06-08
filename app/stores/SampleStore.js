@@ -7,7 +7,8 @@ class SampleStore extends ReduceStore {
     return {
       logins: [],
       swords: [],
-      shields: []
+      shields: [],
+      info: []
     };
   }
   //obadac to dokladnie
@@ -28,7 +29,8 @@ class SampleStore extends ReduceStore {
         const result2 = {
         logins: action.data.logins,
         shields: state.shields,
-        swords: state.swords
+        swords: state.swords,
+        info: state.info
         }
         return result2;
 
@@ -36,7 +38,8 @@ class SampleStore extends ReduceStore {
         const result3 = {
           swords: action.data.swords,
           logins: state.logins,
-          shields: state.shields
+          shields: state.shields,
+          info: state.info
         }
         return result3;
 
@@ -44,9 +47,18 @@ class SampleStore extends ReduceStore {
         const result4 = {
           shields: action.data.shields,
           logins: state.logins,
-          swords: state.logins
+          swords: state.swords,
+          info: state.info
         }
         return result4;
+      case ActionTypes.TYPE_008:
+        const result5 = {
+          shields: state.shields,
+          logins: state.logins,
+          swords: state.swords,
+          info: action.data.info
+        }
+        return result5;
 
       default:
         return state;

@@ -6,9 +6,9 @@ class ShieldContent extends Component {
     return (
       <div>
         <li style = {this.props.style} >
-            <p>Name: {this.props.name},    
-                Def: {this.props.def},   
-                Cost: {this.props.cost}
+            <p>Name: <b>{this.props.name}</b>,    
+                Def: <b>{this.props.def}</b>,   
+                Cost: <b>{this.props.cost}</b>
             </p>
         </li>
       </div>

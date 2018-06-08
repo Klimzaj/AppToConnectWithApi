@@ -7,9 +7,11 @@ import TopContainer from "./components/TopContainer";
 import SampleContainer from "./components/SampleContainer";
 import NewComponent from "./components/NewComponent";
 import PlayersComponent from "./components/PlayersComponent";
+import PlayerListComponent from "./components/PlayerListComponent";
 import AddPlayerComponent from "./components/AddPlayerComponent";
 import SwordsComponent from "./components/SwordsComponent";
 import ShieldsComponent from "./components/ShieldsComponent";
+import AddShopComponent from "./components/AddShopComponent";
 
 const muiTheme = createMuiTheme({});
 
@@ -22,6 +24,8 @@ render(
         <Route path="/addplayer" component={AddPlayerComponent} />
         <Route path="/swords" component={SwordsComponent} />
         <Route path="/shields" component={ShieldsComponent} />
+        <Route path="/addshop" component={AddShopComponent} />
+        <Route path="/playerlist" component={PlayerListComponent} />
       </div>
     </Router>
   </MuiThemeProvider>,

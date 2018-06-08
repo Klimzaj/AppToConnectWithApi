@@ -3,6 +3,8 @@ import axios from 'axios';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 import SampleStore from '../stores/SampleStore';
+import SampleActionCreator from '../actions/SampleActionCreators';
+
 
 class AddPlayerContent extends Component {
   static getStores() {
@@ -34,12 +36,7 @@ constructor(props) {
     const newLogin = document.getElementById('login-input').value; 
     this.setState({ login: e.target.value });
     // this.isLogin(newLogin)
-    if(this.isLogin(newLogin))
-    {
-      console.log('dadal')
-      this.setState({goodLog: true});
-    }
-    else console.log('nic nie dadal')
+    this.isLogin(newLogin)
   }
 
   isLogin = (url) => {
@@ -101,8 +98,9 @@ constructor(props) {
         login: this.state.login,
         password: this.toHex(this.state.password)
       }
-      console.log(obj)
-      // SampleActionCreator.action004(obj);
+      // console.log(obj)
+      SampleActionCreator.action004(obj);
+      alert('Dodal gracza!')
     }
     else {
       console.log("nie dodal!");
