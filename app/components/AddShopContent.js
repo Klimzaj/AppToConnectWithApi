@@ -64,8 +64,9 @@ updateIt = (e) => {
         it: this.state.it,
         d: this.state.d
       }
-      console.log(obj)
+      // console.log(obj)
       SampleActionCreator.action007(obj);
+      alert('Dodał element')
     }
     else {
       console.log("nie dodal!");

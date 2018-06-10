@@ -8,7 +8,9 @@ class SampleStore extends ReduceStore {
       logins: [],
       swords: [],
       shields: [],
-      info: []
+      info: [],
+      id: [],
+      player: undefined
     };
   }
   //obadac to dokladnie
@@ -30,7 +32,9 @@ class SampleStore extends ReduceStore {
         logins: action.data.logins,
         shields: state.shields,
         swords: state.swords,
-        info: state.info
+        info: state.info,
+        id: state.id,
+        idPlayer: state.idPlayer
         }
         return result2;
 
@@ -39,7 +43,9 @@ class SampleStore extends ReduceStore {
           swords: action.data.swords,
           logins: state.logins,
           shields: state.shields,
-          info: state.info
+          info: state.info,
+          id: state.id,
+          idPlayer: state.idPlayer
         }
         return result3;
 
@@ -48,7 +54,9 @@ class SampleStore extends ReduceStore {
           shields: action.data.shields,
           logins: state.logins,
           swords: state.swords,
-          info: state.info
+          info: state.info,
+          id: state.id,
+          idPlayer: state.idPlayer
         }
         return result4;
       case ActionTypes.TYPE_008:
@@ -56,9 +64,33 @@ class SampleStore extends ReduceStore {
           shields: state.shields,
           logins: state.logins,
           swords: state.swords,
-          info: action.data.info
+          info: action.data.info,
+          id: state.id,
+          idPlayer: state.idPlayer
         }
         return result5;
+
+      case ActionTypes.TYPE_010:
+      const result6 = {
+        shields: state.shields,
+        logins: state.logins,
+        swords: state.swords,
+        info: state.info,
+        id: action.data.id,
+        idPlayer: state.idPlayer
+      }
+      return result6;
+
+      case ActionTypes.TYPE_011:
+      const result7 = {
+        shields: state.shields,
+        logins: state.logins,
+        swords: state.swords,
+        info: state.info,
+        id: state.id,
+        player: action.data.player
+      }
+      return result7;
 
       default:
         return state;

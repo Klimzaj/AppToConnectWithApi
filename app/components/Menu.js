@@ -12,6 +12,7 @@ class Menu extends Component {
         {/* <ListItem component={Link} to="/players">PlayerList</ListItem> */}
         <ListItem component={Link} to="/addplayer">AddPlayer</ListItem>
         <ListItem component={Link} to="/playerlist">PlayerList</ListItem>
+        <ListItem component={Link} to="/shoppinglist">ShoppingList</ListItem>
         <ListItem component={Link} to="/addshop">AddShopItem</ListItem>
         <ListItem component={Link} to="/swords">WeaponList</ListItem>
         <ListItem component={Link} to="/shields">ShieldList</ListItem>

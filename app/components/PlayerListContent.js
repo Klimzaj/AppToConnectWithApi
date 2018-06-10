@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types'; 
+import { Link } from 'react-router-dom';
 import Button from 'material-ui/Button';
 import SampleActionCreator from '../actions/SampleActionCreators';
 
@@ -77,7 +78,7 @@ class PlayerListContent extends Component {
       id: this.props.obj.p_id
     })
     .then(function (response) {
-      console.log("usuniety");
+      alert("Gracz usuniety");
       window.location.reload();
     })
     .catch(function (error) {
@@ -102,12 +103,15 @@ class PlayerListContent extends Component {
         }
         // console.log(obj)
         SampleActionCreator.action009(obj);
-        window.location.reload();
+        window.location.reload(); //pobrac na nowo dane!
         alert('Gra przeprowadzona!')
       }
       else {
-        console.log("nie grales!");
+        // console.log("nie grales!");
       }
+    }
+    shopping = () => {
+
     }
   render() {
     return (
@@ -130,6 +134,10 @@ class PlayerListContent extends Component {
             <p>(All/Win): <b>{this.state.all}</b>/<b>{this.state.win}</b></p>
             <Button onClick={this.deletePlayer}>Delete</Button>
             <Button onClick={this.aj}>Let's play!</Button>
+            
+            <Link to={`/shop/${this.props.obj.p_id}`}>
+              <Button>Go shopping!</Button>
+            </Link>
         </div>
       </div>
     );

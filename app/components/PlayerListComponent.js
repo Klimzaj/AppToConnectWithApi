@@ -32,7 +32,7 @@ class _PlayerListContainer extends Component {
     
     handleClick = (e) => {
         // SampleActionCreator.action008();
-        console.log(this.state.sample.info); // dodac length do listy uzytkownikow
+        // console.log(this.state.sample.info);
     }
     
     componentDidMount() {

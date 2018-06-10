@@ -113,7 +113,73 @@ const SampleActionCreators = {
     .catch(function (error) {
       console.log(error);
     });
-  }
+  },
+  action010(arg1) {
+    axios.get('http://localhost:3000/api/playersid')
+    .then(function (response) {
+      let result = response.data.data;
+      // console.log(result)
+      AppDispatcher.dispatch({
+        type: ActionTypes.TYPE_010,
+        data: {
+          "id": result
+        },
+      })
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+  },
+  action011(arg1) {
+    // console.log(arg1)
+    axios.get(`http://localhost:3000/api/player/${arg1}`)
+    .then(function (response) {
+      let result = response.data.data.player;
+      // console.log(result)
+      AppDispatcher.dispatch({
+        type: ActionTypes.TYPE_011,
+        data: {
+          "player": result
+        },
+      })
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+  },
+  action012(arg1) {
+    axios.post('http://localhost:3000/api/buysw', {
+      p_id: arg1.p_id,
+      sw_id: arg1.sw_id
+    })
+    .then(function (response) {
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  },
+  action013(arg1) {
+    axios.post('http://localhost:3000/api/buysh', {
+      p_id: arg1.p_id,
+      sh_id: arg1.sh_id
+    })
+    .then(function (response) {
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  },
+  action014(arg1) {
+    axios.post('http://localhost:3000/api/updatecoin', {
+      p_id: arg1.p_id,
+      coin: arg1.coin
+    })
+    .then(function (response) {
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  },
 };
 
 export default SampleActionCreators;
